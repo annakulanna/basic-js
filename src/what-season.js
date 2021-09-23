@@ -15,7 +15,7 @@ export default function getSeason(date) {
   if (date === undefined) {
     return 'Unable to determine the time of year!'
   } if (new Date(date) == 'Invalid Date' || typeof date === 'number') {
-    throw new UserException('Invalid date!');
+    throw new Error('Invalid date!');
   }
   const month = date.getMonth()
   if (month < 2 || month === 11) {
